@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:bmi_calculator/constants.dart';
 import 'package:bmi_calculator/components/reusable_card.dart';
 import 'package:bmi_calculator/components/bottom_button.dart';
+import 'package:bmi_calculator/screens/workout_page.dart';
 
 class ResultsPage extends StatelessWidget {
   ResultsPage(
@@ -57,6 +58,16 @@ class ResultsPage extends StatelessWidget {
                 ],
               ),
             ),
+          ),
+          RaisedButton(
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return MyWidget();
+              }));
+            },
+            child: Text('Тренировка'),
+            color: Colors.lightGreen,
+            textColor: Colors.white,
           ),
           BottomButton(
             buttonTitle: 'RE-CALCULATE',
