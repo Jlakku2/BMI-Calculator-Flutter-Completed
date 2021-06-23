@@ -49,25 +49,53 @@ class _MyWidgetState extends State<MyWidget> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: AppBar(title: Text("Timer test")),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      body: Column(
         children: <Widget>[
           RaisedButton(
             onPressed: () {
               startTimer();
             },
             color: Colors.lightGreen,
-            child: Text("start & stop",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                    fontSize: 30)),
-          ),
-          Text("$_start",
+            child: Text(
+              "start & stop",
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
-                  fontSize: 30)),
+                  fontSize: 30),
+            ),
+          ),
+          Text(
+            "$_start",
+            style: TextStyle(
+                fontWeight: FontWeight.bold, color: Colors.white, fontSize: 30),
+          ),
+          Expanded(
+            child: Image.asset(
+              "lib/images/1.gif",
+            ),
+          ),
+          Text(
+            "Саламуалейкум !",
+            style: TextStyle(
+                fontWeight: FontWeight.bold, color: Colors.white, fontSize: 30),
+          ),
+          Expanded(
+            child: Image.asset(
+              "lib/images/1.gif",
+            ),
+          ),
+          Text(
+            "Валейкум Ассалам",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+              fontSize: 30,
+            ),
+          ),
+          SizedBox(
+            width: 50,
+            height: 50,
+          ),
         ],
       ),
     );
